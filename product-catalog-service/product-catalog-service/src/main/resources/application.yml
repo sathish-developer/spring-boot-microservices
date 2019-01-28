@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: product-catalog-service
+        
+server:
+  port : 8004
+  
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+     defaultZone: http://localhost:8001/eureka

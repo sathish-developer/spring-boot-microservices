@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: API-GATEWAY
+        
+server:
+  port : 8003
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+     defaultZone: http://localhost:8001/eureka
+
+zuul:
+  routes:
+    item:
+      #path: /hello/**
+      #url: http://localhost:8002/item-catalog-service
+      serviceId: item-catalog-service
+    product:
+      #path: /hello/**
+      #url: http://localhost:8004/product-catalog-service
+      serviceId: product-catalog-service  
